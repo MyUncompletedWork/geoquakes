@@ -81,7 +81,10 @@ function initMap() {
     });
 }
 function onGeoSuccess(json){
-    $('li').remove()
+    $('li').remove();
+    locationsMajor=[];
+    locationsMinor=[];
+    locationsMed=[];
     $('#info h1').append(json.metadata.count);
     let date  = new Date();
     let $earthQakeList = $('ul#earthquake-list');
